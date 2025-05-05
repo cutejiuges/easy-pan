@@ -1,0 +1,35 @@
+spring:
+  # 不启动http端口
+  main:
+    allow-bean-definition-overriding: true
+    web-application-type: none
+  application:
+    name: easyPanBack
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: false
+        register-health-check: true
+        health-check-interval: 10s
+        service-name: ${spring.application.name}
+        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.cloud.consul.discovery.port}
+        prefer-ip-address: true
+        ip-address: ${spring.cloud.client.ip-address}
+        port: 20001
+        heartbeat:
+          enabled: true
+          ttl: 10
+      config:
+        enabled: true
+        format: yaml
+        prefixes: config
+        profile-separator: '-'
+        default-context: ${spring.application.name}
+        data-key: ${spring.application.name}Config
+        watch:
+          delay: 1000
+          enabled: true
+logging:
+  config: classpath:log4j2.xml
