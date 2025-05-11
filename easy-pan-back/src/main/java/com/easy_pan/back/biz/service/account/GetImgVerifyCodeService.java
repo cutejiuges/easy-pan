@@ -1,5 +1,6 @@
-package com.easy_pan.back.infra.utils;
+package com.easy_pan.back.biz.service.account;
 
+import com.easy_pan.back.infra.utils.StringUtils;
 import lombok.Getter;
 
 import javax.imageio.ImageIO;
@@ -10,7 +11,7 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Random;
 
-public class VerifyCode {
+public class GetImgVerifyCodeService {
     private int width = 160; //图片宽度
     private int height = 40; //图片高度
     private int codeLength = 6; //验证码长度
@@ -21,21 +22,21 @@ public class VerifyCode {
     private BufferedImage bufferedImg; //验证码图片buffer
     Random random = new Random(); //随机生成器
 
-    public VerifyCode() {
+    public GetImgVerifyCodeService() {
         this.createImage();
     }
-    public VerifyCode(int width, int height) {
+    public GetImgVerifyCodeService(int width, int height) {
         this.width = width;
         this.height = height;
         this.createImage();
     }
-    public VerifyCode(int width, int height, int codeLength) {
+    public GetImgVerifyCodeService(int width, int height, int codeLength) {
         this.width = width;
         this.height = height;
         this.codeLength = codeLength;
         this.createImage();
     }
-    public VerifyCode(int width, int height, int codeLength, int lineCount) {
+    public GetImgVerifyCodeService(int width, int height, int codeLength, int lineCount) {
         this.width = width;
         this.height = height;
         this.codeLength = codeLength;
@@ -70,22 +71,12 @@ public class VerifyCode {
             graphics.drawLine(x0, y0, x1, y1);
         }
         // 获取随机字符串并完成绘制
-        this.verifyCode = this.randomStr(this.codeLength);
+        this.verifyCode = StringUtils.randomStr(this.codeLength);
         for (int i = 0; i < this.codeLength; i++) {
             String code = "" + this.verifyCode.charAt(i);
             graphics.setColor(this.getRandColor(1, 255));
             graphics.drawString(code, i * fontWidth + 3, posY);
         }
-    }
-
-    // 生成随机字符串
-    private String randomStr(int length) {
-        String source = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY";
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < length; i++) {
-            sb.append(source.charAt((int)(Math.random() * length)));
-        }
-        return sb.toString();
     }
 
     // 生成随机颜色

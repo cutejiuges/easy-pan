@@ -2,6 +2,7 @@ package com.easy_pan.back.config;
 
 import jakarta.annotation.Resource;
 import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.consul.serviceregistry.ConsulRegistration;
 import org.springframework.cloud.consul.serviceregistry.ConsulServiceRegistry;
 import org.springframework.context.event.ContextClosedEvent;
@@ -9,7 +10,7 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@Log4j2
+@Slf4j
 public class ServiceCloseListener {
     @Resource
     private ConsulServiceRegistry consulServiceRegistry;
