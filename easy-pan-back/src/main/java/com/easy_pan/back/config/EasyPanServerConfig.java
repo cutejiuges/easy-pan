@@ -1,9 +1,9 @@
 package com.easy_pan.back.config;
 
-import com.easy_pan.back.biz.handler.EasyPanHandler;
+import com.easy_pan.back.EasyPanHandler;
 import com.easy_pan.server.EasyPanService;
 import jakarta.annotation.Resource;
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.server.TServer;
 import org.apache.thrift.server.TThreadPoolServer;
@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 // 配置accountService后端服务的启动类
-@Log4j2
+@Slf4j
 @Configuration
 public class EasyPanServerConfig {
     @Value("${spring.cloud.consul.discovery.port}")

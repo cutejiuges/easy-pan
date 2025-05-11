@@ -6,10 +6,11 @@ import com.easy_pan.api.rpc.RpcClient;
 import com.easy_pan.server.EasyPanService;
 import jakarta.annotation.Resource;
 import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service
-@Log4j2
+@Slf4j
 public class GetVerifyCodeService {
     @Resource
     private RpcClient Client;
