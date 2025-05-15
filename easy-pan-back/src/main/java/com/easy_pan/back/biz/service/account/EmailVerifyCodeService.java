@@ -1,0 +1,65 @@
+package com.easy_pan.back.biz.service.account;
+
+import com.easy_pan.account.EmailVerifyCodeRequest;
+import com.easy_pan.account.EmailVerifyType;
+import com.easy_pan.back.biz.service.users.UserService;
+import com.easy_pan.back.infra.constants.EmailVerifyCodeStatus;
+import com.easy_pan.back.infra.err_code.CustomException;
+import com.easy_pan.back.infra.err_code.ErrCodeEnum;
+import com.easy_pan.back.infra.utils.MailUtils;
+import com.easy_pan.back.infra.utils.RandomUtils;
+import com.easy_pan.back.infra.utils.StringUtils;
+import com.easy_pan.back.model.bo.EmailVerifyCodeBO;
+import com.easy_pan.back.model.dto.QueryUserDTO;
+import jakarta.annotation.Resource;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Service;
+
+import java.time.Duration;
+
+@Service
+@Slf4j
+public class EmailVerifyCodeService {
+    @Resource
+    private RedisTemplate<String, Object> redisTemplate;
+    @Resource
+    private MailUtils mailUtils;
+    @Resource
+    private UserService userService;
+
+    public void sendEmailVerifyCode(EmailVerifyCodeRequest request) throws Exception {
+        // 如果是新用户注册，检查是否已经注册过
+        if (request.getEmailVerifyType() == EmailVerifyType.Register.getValue()) {
+            if (this.userService.countUser(new QueryUserDTO().setEmail(request.getEmail())) > 0){
+                throw new CustomException(ErrCodeEnum.DATA_EXIST.getCode(), "用户数据已注册");
+            }
+        }
+        // 获取6位数验证码
+        int code = RandomUtils.randomInt(100000, 999999);
+        // 发送验证码
+        processSendCode(request.getEmail(), code, request.getEmailVerifyType());
+        // 数据验证码数据存储到redis中
+        this.cacheEmailVerifyCode(request.getEmail(), code);
+    }
+
+    private void cacheEmailVerifyCode(String email, int code) {
+        EmailVerifyCodeBO verifyCodeBO = new EmailVerifyCodeBO()
+                .setCode(code)
+                .setStatus(EmailVerifyCodeStatus.EmailVerifyCode_Enable);
+        this.redisTemplate.opsForValue().set(StringUtils.generateEmailVerifyCodeKey(email), verifyCodeBO, Duration.ofMinutes(1));
+    }
+
+    private void processSendCode(String email, int code, int type) throws Exception {
+        try {
+            if (type == EmailVerifyType.Register.getValue()) {
+                this.mailUtils.sendRegisterCode(email, code);
+            } else {
+                this.mailUtils.sendPasswordResetCode(email, code);
+            }
+        } catch (Exception e) {
+            log.error("EmailVerifyCodeService.processSendCode exception: ", e);
+            throw new CustomException(ErrCodeEnum.SEND_EMAIL_CODE_ERR);
+        }
+    }
+}

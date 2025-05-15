@@ -28,6 +28,8 @@ public enum ErrCodeEnum {
     // 数据错误 3000~3500
     NO_OPERATOR_AUTH(3000,"无权限操作"),
     NEED_ADMIN(3001,"需要管理员权限"),
+    // 操作段错误
+    SEND_EMAIL_CODE_ERR(40000, "发送邮箱验证码异常")
     ;
 
     private final int code; //错误码
