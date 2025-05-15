@@ -5,42 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8c0ff1e-cc32-4a85-be62-22129145e37e" name="Changes" comment="add gitignore">
-      <change afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/EmailVerifyCodeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/EmailVerifyCodeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/mapper/users/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/EmailVerifyCodeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/users/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/users/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/constants/EmailVerifyCodeStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/utils/MailUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/utils/RandomUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/model/bo/EmailVerifyCodeBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/model/dto/QueryUserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/controller/GetVerifyCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/GetVerifyCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/ImgVerifyCodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/EasyPanHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/EasyPanHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/GetImgVerifyCodeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/ImgVerifyCodeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/GetImgVerifyCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/ImgVerifyCodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/err_code/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/err_code/CustomException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/err_code/ErrCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/err_code/ErrCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/utils/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/resources/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/target/classes/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/target/classes/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/idl/account.thrift" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/idl/account.thrift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/idl/easy_pan_service.thrift" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/idl/easy_pan_service.thrift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/Base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/BaseResp.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/BaseResp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/TrafficEnv.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/TrafficEnv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/GetVerifyCodeData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/GetVerifyCodeRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/GetVerifyCodeResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/VerifyType.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/VerifyType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/server/EasyPanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/server/EasyPanService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +127,7 @@
       <workItem from="1746544930390" duration="5086000" />
       <workItem from="1746719463690" duration="3756000" />
       <workItem from="1746967363234" duration="12207000" />
-      <workItem from="1747059917847" duration="15523000" />
+      <workItem from="1747059917847" duration="17152000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />
@@ -196,11 +162,6 @@
           <properties class="com.easy_pan.back.infra.err_code.CustomException" package="com.easy_pan.back.infra.err_code" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/EmailVerifyCodeService.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
