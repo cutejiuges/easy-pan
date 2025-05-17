@@ -24,12 +24,14 @@ public enum ErrCodeEnum {
     // 数据错误 1000~2000
     DATA_EXIST(1000,"数据已经存在"),
     USER_DATA_NOT_EXIST(1001,"User数据不存在"),
-    DATA_NOT_EXIST(1002,"数据不存在"),
+    USER_DATA_REPLICATE(1002, "该用户已注册"),
+    DATA_NOT_EXIST(1003,"数据不存在"),
     // 数据错误 3000~3500
     NO_OPERATOR_AUTH(3000,"无权限操作"),
     NEED_ADMIN(3001,"需要管理员权限"),
     // 操作段错误
-    SEND_EMAIL_CODE_ERR(40000, "发送邮箱验证码异常")
+    SEND_EMAIL_CODE_ERR(4000, "发送邮箱验证码异常"),
+    IMG_CODE_VERIFY_FAILED(4001, "图形验证码校验失败"),
     ;
 
     private final int code; //错误码

@@ -32,7 +32,7 @@ public class EmailVerifyCodeService {
         // 如果是新用户注册，检查是否已经注册过
         if (request.getEmailVerifyType() == EmailVerifyType.Register.getValue()) {
             if (this.userService.countUser(new QueryUserDTO().setEmail(request.getEmail())) > 0){
-                throw new CustomException(ErrCodeEnum.DATA_EXIST.getCode(), "用户数据已注册");
+                throw new CustomException(ErrCodeEnum.USER_DATA_REPLICATE);
             }
         }
         // 获取6位数验证码
