@@ -4,16 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
+@AllArgsConstructor
 public class CustomException extends RuntimeException {
     private ErrCodeEnum errCodeEnum;
-    private String exceptionMessage;
-    private int exceptionCode;
-
-    public CustomException(ErrCodeEnum errCodeEnum) {
-        this.errCodeEnum = errCodeEnum;
-    }
-    public CustomException(int exceptionCode, String exceptionMessage) {
-        this.exceptionCode = exceptionCode;
-        this.exceptionMessage = exceptionMessage;
-    }
 }

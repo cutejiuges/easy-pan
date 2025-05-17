@@ -3,6 +3,7 @@ package com.easy_pan.back.biz.handler.account;
 import com.cutejiuge.base.BaseResp;
 import com.easy_pan.account.EmailVerifyCodeRequest;
 import com.easy_pan.account.EmailVerifyCodeResponse;
+import com.easy_pan.back.annotation.ArgsLogging;
 import com.easy_pan.back.biz.handler.BackHandler;
 import com.easy_pan.back.biz.service.account.EmailVerifyCodeService;
 import com.easy_pan.back.infra.err_code.CustomException;
@@ -48,6 +49,7 @@ public class EmailVerifyCodeHandler implements BackHandler {
     }
 
     @Override
+    @ArgsLogging
     public Object handle(Object req) {
         try {
             this.checkParams(req);

@@ -20,10 +20,13 @@ public class EmailVerifyCodeService {
     public ResponseResult processBusiness(HttpSession session, EmailVerifyCodeRequest req) {
         try {
             if (!req.getCheckCode().equalsIgnoreCase((String) session.getAttribute(VerifyType.EmailVerification.name()))) {
-                return ResponseResult.errorResult(501, "图形验证码校验失败");
+                return ResponseResult.errorResult(ErrCodeEnum.IMG_CODE_VERIFY_FAILED);
             }
             EmailVerifyCodeResponse resp = this.client.getRpcClient().EmailVerifyCode(req);
-            return ResponseResult.okResult(resp.getBaseResp());
+            if (resp.getBaseResp().getStatusCode() != 0) {
+                return ResponseResult.errorResult(resp.getBaseResp().getStatusCode(), resp.getBaseResp().getStatusMessage());
+            }
+            return ResponseResult.okResult(null);
         } catch (Exception e) {
             log.error("EmailVerifyCodeService.processBusiness exception: ", e);
             return ResponseResult.errorResult(ErrCodeEnum.SERVER_ERROR, e.getMessage());
