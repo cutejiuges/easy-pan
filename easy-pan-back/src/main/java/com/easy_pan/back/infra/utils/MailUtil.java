@@ -9,28 +9,28 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MailUtils {
+public class MailUtil {
     @Value("${spring.mail.username}")
     private String from;
     @Resource
     private JavaMailSender mailSender;
 
-    public boolean sendRegisterCode(String to, int code)  {
+    public boolean sendRegisterCode(String to, long code)  {
         return this.processEmailSend(to, " EasyPan 新用户注册", code);
     }
 
-    public boolean sendPasswordResetCode(String to, int code) {
+    public boolean sendPasswordResetCode(String to, long code) {
         return this.processEmailSend(to, " EasyPan 密码重置", code);
     }
 
-    private boolean processEmailSend(String to, String subject, int code) {
+    private boolean processEmailSend(String to, String subject, long code) {
         MimeMessage mimeMessage = this.mailSender.createMimeMessage();
         try {
             MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
             mimeMessageHelper.setFrom(from);
             mimeMessageHelper.setTo(to);
             mimeMessageHelper.setSubject(subject);
-            String messageTemplate = "您正在使用此邮箱进行%s，邮箱验证码为<h2> %d </h2>验证码将在60s后过期，请即使使用。\n" +
+            String messageTemplate = "您正在使用此邮箱进行%s，邮箱验证码为<h2> %d </h2>验证码将在3 min后过期，请即使使用。\n" +
                     "如非本人操作，请忽略。";
             mimeMessageHelper.setText(String.format(messageTemplate, subject, code), true);
             this.mailSender.send(mimeMessage);

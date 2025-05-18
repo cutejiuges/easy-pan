@@ -20,13 +20,20 @@ public enum ErrCodeEnum {
     PARAM_REQUIRE(500,"缺少参数"),
     PARAM_INVALID(501,"无效参数"),
     PARAM_IMAGE_FORMAT_ERROR(502,"文件格式有误"),
-    SERVER_ERROR(503,"服务器内部错误"),
+    EMAIL_INVALID(503, "邮箱无效，地址不合法"),
+    PASSWORD_INVALID(504, "密码必须包含数字、大小写字母和特殊字符，长度至少8位"),
+    NICKNAME_BLANK(505, "未输入有效用户昵称"),
+    EMAIL_VERIFY_CODE_BLANK(506, "邮箱验证码为空"),
+    SERVER_ERROR(550,"服务器内部错误"),
     // 数据错误 1000~2000
     DATA_EXIST(1000,"数据已经存在"),
     USER_DATA_NOT_EXIST(1001,"User数据不存在"),
     USER_DATA_REPLICATE(1002, "该用户已注册"),
     DATA_NOT_EXIST(1003,"数据不存在"),
-    // 数据错误 3000~3500
+    EMAIL_VERIFY_CODE_EXPIRED(1004, "邮箱验证码已过期"),
+    EMAIL_VERIFY_CODE_USED(1005, "邮箱验证码已使用"),
+    EMAIL_VERIFY_CODE_INCORRECT(1006, "邮箱验证码不正确"),
+    // 权限拦截错误 3000~3500
     NO_OPERATOR_AUTH(3000,"无权限操作"),
     NEED_ADMIN(3001,"需要管理员权限"),
     // 操作段错误

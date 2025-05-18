@@ -7,6 +7,6 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 public class EmailVerifyCodeBO {
-    private Integer code;
-    private Integer status;
+    private long code;
+    private int status;
 }

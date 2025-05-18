@@ -15,7 +15,6 @@ import java.io.IOException;
 @Slf4j
 @Service
 public class ImgVerifyCodeHandler implements BackHandler {
-    private Exception exception;
     private ImgVerifyCodeResponse getVerifyCodeResponse;
 
     @Override
@@ -36,7 +35,6 @@ public class ImgVerifyCodeHandler implements BackHandler {
 
     public void processBusiness(Object req) throws IOException {
         ImgVerifyCodeService imgVerifyCodeService = new ImgVerifyCodeService(130, 40, 5, 10);
-        this.getVerifyCodeResponse = new ImgVerifyCodeResponse();
         this.getVerifyCodeResponse.data = new ImgVerifyCodeData();
         this.getVerifyCodeResponse.data.setCode(imgVerifyCodeService.getVerifyCode());
         this.getVerifyCodeResponse.data.setImg(imgVerifyCodeService.writeImg());
@@ -45,16 +43,18 @@ public class ImgVerifyCodeHandler implements BackHandler {
     @Override
     @ArgsLogging
     public Object handle(Object req) {
+        Exception exception = null;
+        this.getVerifyCodeResponse = new ImgVerifyCodeResponse();
         try {
             this.checkParams(req);
             this.checkPermission(req);
             this.processBusiness(req);
         } catch (Exception e) {
             log.error("GetImgVerifyCodeHandler.Process exception: ", e);
-            this.exception = e;
+            exception = e;
         } finally {
             this.getVerifyCodeResponse.baseResp = new BaseResp();
-            this.packResponse(this.exception, this.getVerifyCodeResponse.baseResp);
+            this.packResponse(exception, this.getVerifyCodeResponse.baseResp);
         }
         return this.getVerifyCodeResponse;
     }

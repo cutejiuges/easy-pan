@@ -44,3 +44,24 @@ struct EmailVerifyCodeRequest {
 struct EmailVerifyCodeResponse {
     255: base.BaseResp baseResp;
 }
+
+// 用户注册请求
+struct UserRegisterRequest {
+    1: string email;
+    2: string nickName;
+    3: string password;
+    4: string imgCheckCode;
+    5: i64 emailVerifyCode;
+    255: optional base.Base base;
+}
+
+// 用户注册返回数据
+struct UserRegisterData {
+    1: i64 userID;
+}
+
+// 用户注册返回
+struct UserRegisterResponse {
+    1: UserRegisterData data;
+    255: optional base.BaseResp baseResp;
+}
