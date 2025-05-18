@@ -13,7 +13,7 @@ import lombok.Setter;
  * </p>
  *
  * @author cutejiuge
- * @since 2025-05-02
+ * @since 2025-05-18
  */
 @Getter
 @Setter
@@ -23,7 +23,7 @@ public class UserInfoDO {
     /**
      * 用户id
      */
-    @TableId(value = "id", type = IdType.ASSIGN_ID)
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
@@ -40,6 +40,11 @@ public class UserInfoDO {
      * 用户头像路径
      */
     private String avatar;
+
+    /**
+     * 密码加盐
+     */
+    private String salt;
 
     /**
      * 用户密码

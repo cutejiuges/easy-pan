@@ -1,6 +1,6 @@
 package com.easy_pan.back.biz.service.account;
 
-import com.easy_pan.back.infra.utils.RandomUtils;
+import com.easy_pan.back.infra.utils.RandomUtil;
 import lombok.Getter;
 
 import javax.imageio.ImageIO;
@@ -71,7 +71,7 @@ public class ImgVerifyCodeService {
             graphics.drawLine(x0, y0, x1, y1);
         }
         // 获取随机字符串并完成绘制
-        this.verifyCode = RandomUtils.randomStr(this.codeLength);
+        this.verifyCode = RandomUtil.randomStr(this.codeLength);
         for (int i = 0; i < this.codeLength; i++) {
             String code = "" + this.verifyCode.charAt(i);
             graphics.setColor(this.getRandColor(1, 255));

@@ -3,6 +3,7 @@ package com.easy_pan.back;
 import com.easy_pan.account.*;
 import com.easy_pan.back.biz.handler.account.EmailVerifyCodeHandler;
 import com.easy_pan.back.biz.handler.account.ImgVerifyCodeHandler;
+import com.easy_pan.back.biz.handler.account.UserRegisterHandler;
 import com.easy_pan.server.EasyPanService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -16,6 +17,8 @@ public class EasyPanHandler implements EasyPanService.Iface {
     private ImgVerifyCodeHandler imgVerifyCodeHandler;
     @Resource
     private EmailVerifyCodeHandler emailVerifyCodeHandler;
+    @Resource
+    private UserRegisterHandler userRegisterHandler;
 
     @Override
     public ImgVerifyCodeResponse ImgVerifyCode(ImgVerifyCodeRequest req) throws TException {
@@ -25,5 +28,10 @@ public class EasyPanHandler implements EasyPanService.Iface {
     @Override
     public EmailVerifyCodeResponse EmailVerifyCode(EmailVerifyCodeRequest req) throws TException {
         return (EmailVerifyCodeResponse) this.emailVerifyCodeHandler.handle(req);
+    }
+
+    @Override
+    public UserRegisterResponse UserRegister(UserRegisterRequest req) throws TException {
+        return (UserRegisterResponse) this.userRegisterHandler.handle(req);
     }
 }

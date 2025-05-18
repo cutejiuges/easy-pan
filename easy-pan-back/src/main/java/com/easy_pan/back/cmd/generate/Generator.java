@@ -28,7 +28,7 @@ public class Generator {
                         })
                 )
                 .packageConfig(builder -> builder
-                        .parent("com.cutejiuge.easy_pan.model")
+                        .parent("com.easy_pan.back.model")
                         .entity("entity")
                 )
                 .strategyConfig(builder -> builder
@@ -36,8 +36,8 @@ public class Generator {
                         .controllerBuilder().disable()
                         .serviceBuilder().disable()
                         .mapperBuilder().disable()
-                        .entityBuilder().enableRemoveIsPrefix().idType(IdType.ASSIGN_ID).convertFileName(s -> s + "DO").disableSerialVersionUID()
-                        .enableLombok()
+                        .entityBuilder().enableRemoveIsPrefix().idType(IdType.AUTO).convertFileName(s -> s + "DO").disableSerialVersionUID()
+                        .enableLombok().enableFileOverride()
                 )
                 .templateEngine(new FreemarkerTemplateEngine())
                 .execute();

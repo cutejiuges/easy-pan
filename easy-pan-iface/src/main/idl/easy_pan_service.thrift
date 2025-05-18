@@ -8,4 +8,6 @@ service EasyPanService {
     account.ImgVerifyCodeResponse ImgVerifyCode(1: account.ImgVerifyCodeRequest req);
     // 获取邮箱验证码
     account.EmailVerifyCodeResponse EmailVerifyCode(1: account.EmailVerifyCodeRequest req);
+    // 新用户注册
+    account.UserRegisterResponse UserRegister(1: account.UserRegisterRequest req);
 }

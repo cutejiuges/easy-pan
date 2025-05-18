@@ -2,7 +2,7 @@ package com.easy_pan.back.infra.utils;
 
 import java.util.Random;
 
-public class RandomUtils {
+public class RandomUtil {
     // 生成随机字符串
     public static String randomStr(int length) {
         String source = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY";

@@ -17,8 +17,6 @@ import org.springframework.stereotype.Service;
 public class EmailVerifyCodeHandler implements BackHandler {
     @Resource
     private EmailVerifyCodeService emailVerifyCodeService;
-    private EmailVerifyCodeResponse getEmailVerifyCodeResponse;
-    private Exception exception;
 
     @Override
     public void checkParams(Object req)  {
@@ -44,24 +42,25 @@ public class EmailVerifyCodeHandler implements BackHandler {
 
     @Override
     public void processBusiness(Object req) throws Exception {
-        this.getEmailVerifyCodeResponse = new EmailVerifyCodeResponse();
         this.emailVerifyCodeService.sendEmailVerifyCode((EmailVerifyCodeRequest) req);
     }
 
     @Override
     @ArgsLogging
     public Object handle(Object req) {
+        Exception exception = null;
+        EmailVerifyCodeResponse getEmailVerifyCodeResponse = new EmailVerifyCodeResponse();
         try {
             this.checkParams(req);
             this.checkPermission(req);
             this.processBusiness(req);
         } catch (Exception e) {
             log.error("EmailVerifyCodeHandler.handle exception: ", e);
-            this.exception = e;
+            exception = e;
         } finally {
-            this.getEmailVerifyCodeResponse.baseResp = new BaseResp();
-            this.packResponse(this.exception, this.getEmailVerifyCodeResponse.baseResp);
+            getEmailVerifyCodeResponse.baseResp = new BaseResp();
+            this.packResponse(exception, getEmailVerifyCodeResponse.baseResp);
         }
-        return this.getEmailVerifyCodeResponse;
+        return getEmailVerifyCodeResponse;
     }
 }
