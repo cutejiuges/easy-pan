@@ -7,6 +7,7 @@ import com.easy_pan.back.biz.service.account.ImgVerifyCodeService;
 import com.easy_pan.back.infra.err_code.CustomException;
 import com.easy_pan.back.infra.err_code.ErrCodeEnum;
 import com.easy_pan.account.*;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +16,8 @@ import java.io.IOException;
 @Slf4j
 @Service
 public class ImgVerifyCodeHandler implements BackHandler {
-    private ImgVerifyCodeResponse getVerifyCodeResponse;
-
+    @Resource
+    private ImgVerifyCodeService imgVerifyCodeService;
     @Override
     public void checkParams(Object req) {
         try {
@@ -33,29 +34,31 @@ public class ImgVerifyCodeHandler implements BackHandler {
     public void checkPermission(Object req) {
     }
 
-    public void processBusiness(Object req) throws IOException {
-        ImgVerifyCodeService imgVerifyCodeService = new ImgVerifyCodeService(130, 40, 5, 10);
-        this.getVerifyCodeResponse.data = new ImgVerifyCodeData();
-        this.getVerifyCodeResponse.data.setCode(imgVerifyCodeService.getVerifyCode());
-        this.getVerifyCodeResponse.data.setImg(imgVerifyCodeService.writeImg());
+    public Object processBusiness(Object req) throws IOException {
+        ImgVerifyCodeResponse resp = new ImgVerifyCodeResponse();
+        resp.data = new ImgVerifyCodeData();
+        this.imgVerifyCodeService.randomVerifyCode();
+        resp.data.setCode(this.imgVerifyCodeService.getVerifyCode());
+        resp.data.setImg(this.imgVerifyCodeService.writeImg());
+        return resp;
     }
 
     @Override
     @ArgsLogging
     public Object handle(Object req) {
         Exception exception = null;
-        this.getVerifyCodeResponse = new ImgVerifyCodeResponse();
+        ImgVerifyCodeResponse resp = new ImgVerifyCodeResponse();
         try {
             this.checkParams(req);
             this.checkPermission(req);
-            this.processBusiness(req);
+            resp = (ImgVerifyCodeResponse) this.processBusiness(req);
         } catch (Exception e) {
             log.error("GetImgVerifyCodeHandler.Process exception: ", e);
             exception = e;
         } finally {
-            this.getVerifyCodeResponse.baseResp = new BaseResp();
-            this.packResponse(exception, this.getVerifyCodeResponse.baseResp);
+            resp.baseResp = new BaseResp();
+            this.packResponse(exception, resp.baseResp);
         }
-        return this.getVerifyCodeResponse;
+        return resp;
     }
 }

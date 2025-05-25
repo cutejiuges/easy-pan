@@ -2,6 +2,7 @@ package com.easy_pan.back.biz.service.account;
 
 import com.easy_pan.back.infra.utils.RandomUtil;
 import lombok.Getter;
+import org.springframework.stereotype.Service;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -11,6 +12,7 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Random;
 
+@Service
 public class ImgVerifyCodeService {
     private int width = 160; //图片宽度
     private int height = 40; //图片高度
@@ -41,6 +43,12 @@ public class ImgVerifyCodeService {
         this.height = height;
         this.codeLength = codeLength;
         this.lineCount = lineCount;
+        this.createImage();
+    }
+
+    public void randomVerifyCode() {
+        // 获取随机字符串并完成绘制
+        this.verifyCode = RandomUtil.randomStr(this.codeLength);
         this.createImage();
     }
 

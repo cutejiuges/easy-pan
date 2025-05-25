@@ -1,9 +1,9 @@
 package com.easy_pan.back.biz.handler.account;
 
 import com.cutejiuge.base.BaseResp;
-import com.easy_pan.account.UserRegisterData;
 import com.easy_pan.account.UserRegisterRequest;
 import com.easy_pan.account.UserRegisterResponse;
+import com.easy_pan.back.annotation.ArgsLogging;
 import com.easy_pan.back.biz.handler.BackHandler;
 import com.easy_pan.back.biz.service.account.UserRegisterService;
 import com.easy_pan.back.infra.err_code.CustomException;
@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 public class UserRegisterHandler implements BackHandler {
     @Resource
     private UserRegisterService userRegisterService;
-    private UserRegisterData data;
 
     @Override
     public void checkParams(Object req) throws Exception {
@@ -50,13 +49,14 @@ public class UserRegisterHandler implements BackHandler {
     }
 
     @Override
+    @ArgsLogging
     public Object handle(Object req) {
         Exception exception = null;
         UserRegisterResponse userRegisterResponse = new UserRegisterResponse();
         try {
             checkParams(req);
             checkPermission(req);
-            processBusiness(req);
+            userRegisterResponse = (UserRegisterResponse) processBusiness(req);
         } catch (Exception e) {
             log.error("UserRegisterHandler.handle exception:", e);
             exception = e;
@@ -64,12 +64,13 @@ public class UserRegisterHandler implements BackHandler {
             userRegisterResponse.baseResp = new BaseResp();
             this.packResponse(exception, userRegisterResponse.baseResp);
         }
-        userRegisterResponse.setData(this.data);
         return userRegisterResponse;
     }
 
     @Override
-    public void processBusiness(Object req) throws Exception {
-        this.data = this.userRegisterService.userRegister((UserRegisterRequest) req);
+    public Object processBusiness(Object req) throws Exception {
+        UserRegisterResponse userRegisterResponse = new UserRegisterResponse();
+        userRegisterResponse.setData(this.userRegisterService.userRegister((UserRegisterRequest) req));
+        return userRegisterResponse;
     }
 }
