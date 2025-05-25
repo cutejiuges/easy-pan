@@ -41,8 +41,9 @@ public class EmailVerifyCodeHandler implements BackHandler {
     }
 
     @Override
-    public void processBusiness(Object req) throws Exception {
+    public Object processBusiness(Object req) throws Exception {
         this.emailVerifyCodeService.sendEmailVerifyCode((EmailVerifyCodeRequest) req);
+        return new EmailVerifyCodeResponse();
     }
 
     @Override
@@ -53,7 +54,7 @@ public class EmailVerifyCodeHandler implements BackHandler {
         try {
             this.checkParams(req);
             this.checkPermission(req);
-            this.processBusiness(req);
+            getEmailVerifyCodeResponse = (EmailVerifyCodeResponse) this.processBusiness(req);
         } catch (Exception e) {
             log.error("EmailVerifyCodeHandler.handle exception: ", e);
             exception = e;

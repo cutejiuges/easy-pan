@@ -8,7 +8,7 @@ public interface BackHandler {
     void checkParams(Object req) throws Exception;
     void checkPermission(Object req) throws Exception;
     Object handle(Object req) throws Exception;
-    void processBusiness(Object req) throws Exception;
+    Object processBusiness(Object req) throws Exception;
     default void packResponse(Exception e, BaseResp baseResp) {
         if (e == null) {
             baseResp.setStatusCode(ErrCodeEnum.SUCCESS.getCode());
