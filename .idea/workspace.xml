@@ -5,15 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8c0ff1e-cc32-4a85-be62-22129145e37e" name="Changes" comment="add gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2025_5_16_下午9_53_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2025_5_16_下午9_55_[Changes]/shelved.patch" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/UserLoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/UserLoginHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/UserLoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/infra/expection/ExceptionCatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/infra/expection/ExceptionCatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/infra/result/ResponseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/result/ResponseResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/EmailVerifyCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/EmailVerifyCodeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/UserRegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/UserRegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/EasyPanHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/EasyPanHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/BackHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/BackHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/EmailVerifyCodeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/EmailVerifyCodeHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/ImgVerifyCodeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/ImgVerifyCodeHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/UserRegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/UserRegisterHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/EmailVerifyCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/EmailVerifyCodeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/ImgVerifyCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/ImgVerifyCodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/utils/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/utils/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/UserRegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/UserRegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/users/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/users/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/users/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/users/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/err_code/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/errcode/CustomException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/err_code/ErrCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/errcode/ErrCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/utils/RandomUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/utils/RandomUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/utils/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/utils/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/model/converter/UserConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/model/converter/UserConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/idl/account.thrift" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/idl/account.thrift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/idl/easy_pan_service.thrift" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/idl/easy_pan_service.thrift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/BaseResp.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/BaseResp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/TrafficEnv.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/TrafficEnv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/EmailVerifyCodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/EmailVerifyCodeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/EmailVerifyCodeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/EmailVerifyCodeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/EmailVerifyType.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/EmailVerifyType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/ImgVerifyCodeData.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/ImgVerifyCodeData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/ImgVerifyCodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/ImgVerifyCodeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/ImgVerifyCodeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/ImgVerifyCodeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserRegisterData.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserRegisterData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserRegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserRegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserRegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserRegisterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/VerifyType.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/VerifyType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/server/EasyPanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/server/EasyPanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$AsyncClient$Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$AsyncClient$Factory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$AsyncClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$AsyncClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$AsyncIface.class" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$AsyncIface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$AsyncProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$AsyncProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$Client$Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$Client$Factory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$Iface.class" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$Iface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$Processor.class" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService$Processor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService.class" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/target/classes/com/easy_pan/server/EasyPanService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,34 +103,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Generator.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.easy-pan [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.easy-pan [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.easy-pan-back [org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApiApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.BackApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/user__register&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/wujie/myFiles/CodeProject/java_practice/easy-pan&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Generator.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.easy-pan [clean].executor": "Run",
+    "Maven.easy-pan [compile].executor": "Run",
+    "Maven.easy-pan [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
+    "Maven.easy-pan-back [org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ApiApplication.executor": "Debug",
+    "Spring Boot.BackApplication.executor": "Debug",
+    "git-widget-placeholder": "feat/user__login",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/wujie/myFiles/CodeProject/java_practice/easy-pan",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>

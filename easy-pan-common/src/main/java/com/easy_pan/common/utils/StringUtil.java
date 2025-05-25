@@ -1,4 +1,4 @@
-package com.easy_pan.back.infra.utils;
+package com.easy_pan.common.utils;
 
 public class StringUtil {
     public static String generateEmailVerifyCodeKey(String email) {

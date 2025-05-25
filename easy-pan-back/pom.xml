@@ -93,6 +93,10 @@
             <groupId>com.cutejiuge</groupId>
             <artifactId>easy-pan-iface</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.cutejiuge</groupId>
+            <artifactId>easy-pan-common</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

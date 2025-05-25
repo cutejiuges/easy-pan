@@ -1,6 +1,6 @@
 package com.easy_pan.back.biz.service.account;
 
-import com.easy_pan.back.infra.utils.RandomUtil;
+import com.easy_pan.common.utils.RandomUtil;
 import lombok.Getter;
 import org.springframework.stereotype.Service;
 

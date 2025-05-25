@@ -65,3 +65,25 @@ struct UserRegisterResponse {
     1: UserRegisterData data;
     255: optional base.BaseResp baseResp;
 }
+
+// 用户登陆请求
+struct UserLoginRequest {
+    1: required string email;
+    2: required string password;
+    255: optional base.Base base;
+}
+
+// 用户登陆返回数据
+struct UserLoginData {
+    1: i64 userID;
+    2: string nickName;
+    3: i64 totalSpace;
+    4: i64 usedSpace;
+    5: string jwtToken;
+}
+
+// 用户登录返回
+struct UserLoginResponse {
+    1: UserLoginData data;
+    255: base.BaseResp baseResp;
+}

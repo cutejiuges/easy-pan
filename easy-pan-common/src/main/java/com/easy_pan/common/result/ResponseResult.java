@@ -1,6 +1,6 @@
-package com.easy_pan.api.infra.result;
+package com.easy_pan.common.result;
 
-import com.easy_pan.back.infra.err_code.ErrCodeEnum;
+import com.easy_pan.common.errcode.ErrCodeEnum;
 import lombok.Data;
 
 import java.io.Serializable;

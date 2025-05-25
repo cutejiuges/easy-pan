@@ -10,4 +10,6 @@ public interface UserService extends IService<UserInfoDO> {
     Long countUser(QueryUserDTO dto);
     // 向数据库中插入一条用户记录
     Long createUser(SaveUserDTO dto);
+    // 查询用户信息
+    UserInfoDO queryOneUser(QueryUserDTO dto);
 }

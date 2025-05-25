@@ -34,4 +34,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserInfoDO> impleme
         this.userMapper.insert(userInfo);
         return userInfo.getId();
     }
+
+    @Override
+    public UserInfoDO queryOneUser(QueryUserDTO dto) {
+        LambdaQueryWrapper<UserInfoDO> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(dto.getEmail() != null, UserInfoDO::getEmail, dto.getEmail());
+        return this.userMapper.selectOne(queryWrapper);
+    }
 }

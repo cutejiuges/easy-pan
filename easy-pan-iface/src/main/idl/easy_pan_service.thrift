@@ -10,4 +10,6 @@ service EasyPanService {
     account.EmailVerifyCodeResponse EmailVerifyCode(1: account.EmailVerifyCodeRequest req);
     // 新用户注册
     account.UserRegisterResponse UserRegister(1: account.UserRegisterRequest req);
+    // 用户登录
+    account.UserLoginResponse UserLogin(1: account.UserLoginRequest req);
 }

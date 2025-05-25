@@ -34,4 +34,9 @@ public class EasyPanHandler implements EasyPanService.Iface {
     public UserRegisterResponse UserRegister(UserRegisterRequest req) throws TException {
         return (UserRegisterResponse) this.userRegisterHandler.handle(req);
     }
+
+    @Override
+    public UserLoginResponse UserLogin(UserLoginRequest req) throws TException {
+        return null;
+    }
 }

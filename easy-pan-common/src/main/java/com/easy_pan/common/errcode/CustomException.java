@@ -1,4 +1,4 @@
-package com.easy_pan.back.infra.err_code;
+package com.easy_pan.common.errcode;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

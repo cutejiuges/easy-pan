@@ -1,8 +1,8 @@
 package com.easy_pan.api.infra.expection;
 
-import com.easy_pan.api.infra.result.ResponseResult;
-import com.easy_pan.back.infra.err_code.CustomException;
-import com.easy_pan.back.infra.err_code.ErrCodeEnum;
+import com.easy_pan.common.errcode.CustomException;
+import com.easy_pan.common.errcode.ErrCodeEnum;
+import com.easy_pan.common.result.ResponseResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

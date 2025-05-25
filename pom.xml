@@ -11,6 +11,7 @@
     <module>easy-pan-back</module>
     <module>easy-pan-iface</module>
     <module>easy-pan-api</module>
+    <module>easy-pan-common</module>
   </modules>
 
   <!-- 继承Spring boot工程 -->
@@ -68,6 +69,11 @@
       <dependency>
         <groupId>com.cutejiuge</groupId>
         <artifactId>easy-pan-back</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.cutejiuge</groupId>
+        <artifactId>easy-pan-common</artifactId>
         <version>${project.version}</version>
       </dependency>
 
