@@ -9,7 +9,6 @@ import com.easy_pan.back.biz.service.account.UserLoginService;
 import com.easy_pan.common.errcode.CustomException;
 import com.easy_pan.common.errcode.ErrCodeEnum;
 import jakarta.annotation.Resource;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +20,7 @@ public class UserLoginHandler implements BackHandler {
 
     @Override
     public void checkParams(Object req) throws Exception {
-        if (! (req instanceof HttpServletRequest)) {
+        if (! (req instanceof UserLoginRequest)) {
             throw new CustomException(ErrCodeEnum.PARAM_INVALID);
         }
     }
@@ -32,7 +31,7 @@ public class UserLoginHandler implements BackHandler {
 
     @Override
     @ArgsLogging
-    public Object handle(Object req) throws Exception {
+    public Object handle(Object req) {
         Exception exception = null;
         UserLoginResponse resp = new UserLoginResponse();
         try {

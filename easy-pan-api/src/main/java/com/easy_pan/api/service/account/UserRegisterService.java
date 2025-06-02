@@ -18,7 +18,7 @@ public class UserRegisterService {
     @Resource
     private RpcClient client;
 
-    public ResponseResult processUserRegister(HttpSession session, UserRegisterRequest req) {
+    public ResponseResult<?> processUserRegister(HttpSession session, UserRegisterRequest req) {
         if (!req.getImgCheckCode().equalsIgnoreCase((String) session.getAttribute(VerifyType.LoginAndRegister.name()))) {
             return ResponseResult.errorResult(ErrCodeEnum.IMG_CODE_VERIFY_FAILED);
         }

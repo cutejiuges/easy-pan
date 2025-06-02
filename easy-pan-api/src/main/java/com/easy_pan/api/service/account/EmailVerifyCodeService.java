@@ -17,7 +17,7 @@ public class EmailVerifyCodeService {
     @Resource
     private RpcClient client;
 
-    public ResponseResult processBusiness(HttpSession session, EmailVerifyCodeRequest req) {
+    public ResponseResult<?> processBusiness(HttpSession session, EmailVerifyCodeRequest req) {
         try {
             if (!req.getCheckCode().equalsIgnoreCase((String) session.getAttribute(VerifyType.EmailVerification.name()))) {
                 return ResponseResult.errorResult(ErrCodeEnum.IMG_CODE_VERIFY_FAILED);

@@ -42,7 +42,7 @@ struct EmailVerifyCodeRequest {
 
 // 邮箱验证码返回结构
 struct EmailVerifyCodeResponse {
-    255: base.BaseResp baseResp;
+    255: optional base.BaseResp baseResp;
 }
 
 // 用户注册请求
@@ -79,11 +79,24 @@ struct UserLoginData {
     2: string nickName;
     3: i64 totalSpace;
     4: i64 usedSpace;
-    5: string jwtToken;
+    5: string accessToken;
+    6: string refreshToken;
 }
 
 // 用户登录返回
 struct UserLoginResponse {
     1: UserLoginData data;
-    255: base.BaseResp baseResp;
+    255: optional base.BaseResp baseResp;
+}
+
+// 用户退出登陆请求
+struct UserLogoutRequest {
+    1: i64 userID;
+    2: string accessToken;
+    255: optional base.Base base;
+}
+
+// 用户退出登陆返回
+struct UserLogoutResponse {
+    255: optional base.BaseResp baseResp;
 }

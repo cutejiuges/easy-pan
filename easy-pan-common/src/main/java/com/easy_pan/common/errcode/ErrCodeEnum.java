@@ -36,6 +36,7 @@ public enum ErrCodeEnum {
     // 权限拦截错误 3000~3500
     NO_OPERATOR_AUTH(3000,"无权限操作"),
     NEED_ADMIN(3001,"需要管理员权限"),
+    NON_PERSONAL_RESOURCES(3002, "非本人资源不可操作"),
     // 操作段错误
     SEND_EMAIL_CODE_ERR(4000, "发送邮箱验证码异常"),
     IMG_CODE_VERIFY_FAILED(4001, "图形验证码校验失败"),

@@ -1,10 +1,7 @@
 package com.easy_pan.api.controller;
 
 import com.easy_pan.account.*;
-import com.easy_pan.api.service.account.EmailVerifyCodeService;
-import com.easy_pan.api.service.account.ImgVerifyCodeService;
-import com.easy_pan.api.service.account.UserLoginService;
-import com.easy_pan.api.service.account.UserRegisterService;
+import com.easy_pan.api.service.account.*;
 import com.easy_pan.common.result.ResponseResult;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletResponse;
@@ -22,6 +19,8 @@ public class AccountController {
     private UserRegisterService userRegisterService;
     @Resource
     private UserLoginService userLoginService;
+    @Resource
+    private UserLogoutService userLogoutService;
 
     @GetMapping("/img_verify_code")
     public void GetImgVerifyCode(HttpServletResponse response, HttpSession session, Integer type) throws Exception {
@@ -29,17 +28,22 @@ public class AccountController {
     }
 
     @PostMapping("/email_verify_code/send")
-    public ResponseResult sendEmailVerifyCode(HttpSession session, @RequestBody EmailVerifyCodeRequest req) {
+    public ResponseResult<?> sendEmailVerifyCode(HttpSession session, @RequestBody EmailVerifyCodeRequest req) {
         return this.emailVerifyCodeService.processBusiness(session, req);
     }
 
-    @PostMapping("users/register")
-    public ResponseResult userRegister(HttpSession session, @RequestBody UserRegisterRequest req) {
+    @PostMapping("/users/register")
+    public ResponseResult<?> userRegister(HttpSession session, @RequestBody UserRegisterRequest req) {
         return this.userRegisterService.processUserRegister(session, req);
     }
 
-    @PostMapping("user/login")
-    public ResponseResult userLogin(@RequestBody UserLoginRequest req) {
+    @PostMapping("/user/login")
+    public ResponseResult<?> userLogin(@RequestBody UserLoginRequest req) {
         return this.userLoginService.processUserLogin(req);
+    }
+
+    @GetMapping("/user/logout")
+    public ResponseResult<?> userLogout(@RequestParam Long userId) {
+        return this.userLogoutService.processUserLogout(userId);
     }
 }

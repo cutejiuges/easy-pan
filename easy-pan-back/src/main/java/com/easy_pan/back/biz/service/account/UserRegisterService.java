@@ -2,31 +2,29 @@ package com.easy_pan.back.biz.service.account;
 
 import com.easy_pan.account.UserRegisterData;
 import com.easy_pan.account.UserRegisterRequest;
-import com.easy_pan.back.biz.service.users.UserService;
-import com.easy_pan.back.infra.constants.EmailVerifyCodeStatus;
-import com.easy_pan.back.model.bo.EmailVerifyCodeBO;
-import com.easy_pan.back.model.dto.QueryUserDTO;
-import com.easy_pan.back.model.dto.SaveUserDTO;
+import com.easy_pan.back.infra.utils.RedisOpsUtil;
+import com.easy_pan.common.constants.Constants;
 import com.easy_pan.common.errcode.CustomException;
 import com.easy_pan.common.errcode.ErrCodeEnum;
 import com.easy_pan.common.utils.RandomUtil;
-import com.easy_pan.common.utils.StringUtil;
+import com.easy_pan.model.pojo.bo.EmailVerifyCodeBO;
+import com.easy_pan.model.pojo.dto.QueryUserDTO;
+import com.easy_pan.model.pojo.dto.SaveUserDTO;
+import com.easy_pan.model.service.IUserInfoService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;
-import java.util.concurrent.TimeUnit;
 
 @Slf4j
 @Service
 public class UserRegisterService {
     @Resource
-    private UserService userService;
+    private IUserInfoService userService;
     @Resource
-    private RedisTemplate<String, Object> redisTemplate;
+    private RedisOpsUtil redisOpsUtil;
 
     // 执行用户注册动作
     public UserRegisterData userRegister(UserRegisterRequest req) {
@@ -48,23 +46,18 @@ public class UserRegisterService {
     // 检查邮箱验证码信息
     private void checkEmailVerifyCode(String email, Long code) {
         // 先检查验证码和redis存储是否一致
-        String emailKey = StringUtil.generateEmailVerifyCodeKey(email);
-        EmailVerifyCodeBO cachedVerifyCode = (EmailVerifyCodeBO) this.redisTemplate.opsForValue().get(emailKey);
+        EmailVerifyCodeBO cachedVerifyCode = this.redisOpsUtil.getEmailVerifyCode(email);
         if (cachedVerifyCode == null) {
             throw new CustomException(ErrCodeEnum.EMAIL_VERIFY_CODE_EXPIRED);
         }
-        if (!Objects.equals(cachedVerifyCode.getStatus(), EmailVerifyCodeStatus.EmailVerifyCode_Enable)) {
+        if (!Objects.equals(cachedVerifyCode.getStatus(), Constants.EmailVerifyCode_Enable)) {
             throw new CustomException(ErrCodeEnum.EMAIL_VERIFY_CODE_USED);
         }
         if (!Objects.equals(cachedVerifyCode.getCode(), code)) {
             throw new CustomException(ErrCodeEnum.EMAIL_VERIFY_CODE_INCORRECT);
         }
         // 一致说明通过校验，将验证码置为已使用
-        Long expire = this.redisTemplate.getExpire(emailKey, TimeUnit.MILLISECONDS);
-        cachedVerifyCode.setStatus(EmailVerifyCodeStatus.EmailVerifyCode_Used);
-        if (expire != null && expire > 0) {
-            this.redisTemplate.opsForValue().set(emailKey, cachedVerifyCode, expire, TimeUnit.MILLISECONDS);
-        }
+        this.redisOpsUtil.setEmailVerifyCodeUsed(email);
     }
 
     // 保存用户信息

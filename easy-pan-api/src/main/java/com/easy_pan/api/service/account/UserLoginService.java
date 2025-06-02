@@ -15,7 +15,7 @@ public class UserLoginService {
     @Resource
     private RpcClient client;
 
-    public ResponseResult processUserLogin(UserLoginRequest userLoginRequest) {
+    public ResponseResult<?> processUserLogin(UserLoginRequest userLoginRequest) {
         try {
             UserLoginResponse resp = client.getRpcClient().UserLogin(userLoginRequest);
             if (resp.getBaseResp().getStatusCode() != 0) {

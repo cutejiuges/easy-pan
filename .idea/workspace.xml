@@ -5,35 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8c0ff1e-cc32-4a85-be62-22129145e37e" name="Changes" comment="add gitignore">
-      <change afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/UserLoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/UserLoginHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/UserLoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy-pan-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/config/AuthorizationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/infra/utils/JwtTokenHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/interception/AuthorizationInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/UserLogoutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/UserLogoutHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/UserLogoutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/utils/RedisOpsUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/constants/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/enums/JwtTokenTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/utils/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-common/src/test/java/com/easy_pan/common/utils/JwtUtilTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-model/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-model/src/main/java/com/easy_pan/model/converter/UserTokenConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-model/src/main/java/com/easy_pan/model/pojo/dto/QueryTokenDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-model/src/main/java/com/easy_pan/model/pojo/dto/SaveTokenDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easy-pan-model/src/main/java/com/easy_pan/model/pojo/vo/UserInfoVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/infra/expection/ExceptionCatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/infra/expection/ExceptionCatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/infra/result/ResponseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/result/ResponseResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/infra/expection/ExceptionCatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/infra/exception/ExceptionCatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/EmailVerifyCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/EmailVerifyCodeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/UserLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/UserLoginService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/UserRegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-api/src/main/java/com/easy_pan/api/service/account/UserRegisterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-back/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/BackApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/BackApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/EasyPanHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/EasyPanHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/BackHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/BackHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/EmailVerifyCodeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/EmailVerifyCodeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/ImgVerifyCodeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/ImgVerifyCodeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/UserRegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/UserRegisterHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/UserLoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/handler/account/UserLoginHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/mapper/users/UserMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/EmailVerifyCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/EmailVerifyCodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/ImgVerifyCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/ImgVerifyCodeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/UserLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/UserLoginService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/UserRegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/account/UserRegisterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/users/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/users/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/users/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/users/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/err_code/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/errcode/CustomException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/err_code/ErrCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/errcode/ErrCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/utils/RandomUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/utils/RandomUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/utils/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/utils/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/model/converter/UserConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/model/converter/UserConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/users/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/biz/service/users/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/cmd/generate/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-model/src/main/java/com/easy_pan/model/generate/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/constants/EmailVerifyCodeStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/constants/SpaceSize.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/infra/constants/UserInfoStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/model/bo/EmailVerifyCodeBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-model/src/main/java/com/easy_pan/model/pojo/bo/EmailVerifyCodeBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/model/converter/UserConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-model/src/main/java/com/easy_pan/model/converter/UserConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/model/dto/QueryUserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-model/src/main/java/com/easy_pan/model/pojo/dto/QueryUserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/model/dto/SaveUserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-model/src/main/java/com/easy_pan/model/pojo/dto/SaveUserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-back/src/main/java/com/easy_pan/back/model/entity/UserInfoDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-model/src/main/java/com/easy_pan/model/pojo/entity/UserInfoDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/errcode/ErrCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/errcode/ErrCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/result/ResponseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/result/ResponseResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/utils/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-common/src/main/java/com/easy_pan/common/utils/RedisKeyUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/idl/account.thrift" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/idl/account.thrift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/idl/easy_pan_service.thrift" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/idl/easy_pan_service.thrift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/cutejiuge/base/Base.java" afterDir="false" />
@@ -45,6 +63,9 @@
       <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/ImgVerifyCodeData.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/ImgVerifyCodeData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/ImgVerifyCodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/ImgVerifyCodeRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/ImgVerifyCodeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/ImgVerifyCodeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserLoginData.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserLoginData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserLoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserLoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserLoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserLoginResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserRegisterData.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserRegisterData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserRegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserRegisterRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserRegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/easy-pan-iface/src/main/java/com/easy_pan/account/UserRegisterResponse.java" afterDir="false" />
@@ -72,6 +93,7 @@
       <list>
         <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -106,11 +128,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Generator.executor": "Run",
+    "Application.com.easy_pan.model.generate.Generator.executor": "Run",
+    "JUnit.JwtUtilTest.parseJwtToken.executor": "Run",
+    "JUnit.JwtUtilTest.testParseJwtToken.executor": "Debug",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.easy-pan [clean].executor": "Run",
     "Maven.easy-pan [compile].executor": "Run",
     "Maven.easy-pan [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
+    "Maven.easy-pan-back [compile].executor": "Run",
     "Maven.easy-pan-back [org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile].executor": "Run",
+    "Maven.easy-pan-common [compile].executor": "Run",
+    "Maven.easy-pan-iface [compile].executor": "Run",
+    "Maven.easy-pan-model [compile].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -118,9 +147,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.ApiApplication.executor": "Debug",
     "Spring Boot.BackApplication.executor": "Debug",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "feat/user__login",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/wujie/myFiles/CodeProject/java_practice/easy-pan",
+    "last_opened_file_path": "/home/wujie/myFiles/CodeProject/java_practice/easy-pan/easy-pan-model/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -129,7 +160,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -137,26 +168,68 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/easy-pan-model/src/main/resources" />
+      <recent name="$PROJECT_DIR$/easy-pan-model/src/main/java/com/easy_pan" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/easy-pan-back" />
       <recent name="$PROJECT_DIR$/easy-pan-back/src" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.easy_pan.common.utils" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ApiApplication">
-    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="com.easy_pan.model.generate.Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
-        <env name="DB_MYSQL_USERNAME" value="root" />
         <env name="DB_MYSQL_PASSWORD" value="root" />
+        <env name="DB_MYSQL_USERNAME" value="root" />
         <env name="AUTHOR" value="cutejiuge" />
       </envs>
-      <option name="MAIN_CLASS_NAME" value="com.easy_pan.back.cmd.generate.Generator" />
-      <module name="easy-pan-back" />
+      <option name="MAIN_CLASS_NAME" value="com.easy_pan.model.generate.Generator" />
+      <module name="easy-pan-model" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.easy_pan.back.cmd.generate.*" />
+          <option name="PATTERN" value="com.easy_pan.model.generate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JwtUtilTest.parseJwtToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="easy-pan-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.easy_pan.common.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.easy_pan.common.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.easy_pan.common.utils.JwtUtilTest" />
+      <option name="METHOD_NAME" value="parseJwtToken" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JwtUtilTest.testParseJwtToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="easy-pan-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.easy_pan.common.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.easy_pan.common.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.easy_pan.common.utils.JwtUtilTest" />
+      <option name="METHOD_NAME" value="testParseJwtToken" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,17 +261,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Generator" />
+      <item itemvalue="Application.com.easy_pan.model.generate.Generator" />
+      <item itemvalue="JUnit.JwtUtilTest.parseJwtToken" />
+      <item itemvalue="JUnit.JwtUtilTest.testParseJwtToken" />
       <item itemvalue="Spring Boot.ApiApplication" />
       <item itemvalue="Spring Boot.BackApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ApiApplication" />
         <item itemvalue="Spring Boot.BackApplication" />
-        <item itemvalue="Application.Generator" />
         <item itemvalue="Spring Boot.ApiApplication" />
-        <item itemvalue="Spring Boot.BackApplication" />
+        <item itemvalue="Application.com.easy_pan.model.generate.Generator" />
+        <item itemvalue="JUnit.JwtUtilTest.parseJwtToken" />
+        <item itemvalue="JUnit.JwtUtilTest.testParseJwtToken" />
       </list>
     </recent_temporary>
   </component>
@@ -228,6 +303,10 @@
       <workItem from="1747616912092" duration="102000" />
       <workItem from="1747872425917" duration="4429000" />
       <workItem from="1748075510400" duration="21000" />
+      <workItem from="1748359032383" duration="12000" />
+      <workItem from="1748393991634" duration="2584000" />
+      <workItem from="1748478931745" duration="13195000" />
+      <workItem from="1748713143380" duration="40148000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />
@@ -262,6 +341,11 @@
           <properties class="com.easy_pan.back.infra.err_code.CustomException" package="com.easy_pan.back.infra.err_code" />
           <option name="timeStamp" value="2" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/easy-pan-common/src/test/java/com/easy_pan/common/utils/JwtUtilTest.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
