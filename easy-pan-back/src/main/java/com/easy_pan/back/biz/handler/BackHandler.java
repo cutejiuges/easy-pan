@@ -1,8 +1,9 @@
 package com.easy_pan.back.biz.handler;
 
 import com.cutejiuge.base.BaseResp;
-import com.easy_pan.back.infra.err_code.CustomException;
-import com.easy_pan.back.infra.err_code.ErrCodeEnum;
+import com.easy_pan.common.errcode.CustomException;
+import com.easy_pan.common.errcode.ErrCodeEnum;
+
 
 public interface BackHandler {
     void checkParams(Object req) throws Exception;

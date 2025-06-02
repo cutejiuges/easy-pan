@@ -3,9 +3,9 @@ package com.easy_pan.api.service.account;
 import com.easy_pan.account.EmailVerifyCodeRequest;
 import com.easy_pan.account.EmailVerifyCodeResponse;
 import com.easy_pan.account.VerifyType;
-import com.easy_pan.api.infra.result.ResponseResult;
 import com.easy_pan.api.rpc.RpcClient;
-import com.easy_pan.back.infra.err_code.ErrCodeEnum;
+import com.easy_pan.common.errcode.ErrCodeEnum;
+import com.easy_pan.common.result.ResponseResult;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
@@ -17,7 +17,7 @@ public class EmailVerifyCodeService {
     @Resource
     private RpcClient client;
 
-    public ResponseResult processBusiness(HttpSession session, EmailVerifyCodeRequest req) {
+    public ResponseResult<?> processBusiness(HttpSession session, EmailVerifyCodeRequest req) {
         try {
             if (!req.getCheckCode().equalsIgnoreCase((String) session.getAttribute(VerifyType.EmailVerification.name()))) {
                 return ResponseResult.errorResult(ErrCodeEnum.IMG_CODE_VERIFY_FAILED);
